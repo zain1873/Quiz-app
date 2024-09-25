@@ -1,0 +1,121 @@
+/* General body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container for the quiz */
+.quiz-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Styling the question text */
+.quiz-container h2 {
+  color: #34495e;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* List of options styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each option in the quiz */
+ul li {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Hover effect for the options */
+ul li:hover {
+  background-color: #2980b9;
+  transform: scale(1.02);
+}
+
+/* Styling for selected answer */
+.selected {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  transform: scale(1.05);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+/* Styles for the Next Question button */
+.app_btn {
+  background-color: #28a745; /* Green background */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%; /* Full-width for consistency */
+  text-align: center;
+}
+
+/* Hover effect for the button */
+.app_btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Active state for button */
+.app_btn:active {
+  background-color: #1e7e34;
+  transform: translateY(0); /* Reset lift effect */
+}
+
+/* Disabled state for button */
+.app_btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive styling for mobile */
+@media screen and (max-width: 768px) {
+  .quiz-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .app_btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
